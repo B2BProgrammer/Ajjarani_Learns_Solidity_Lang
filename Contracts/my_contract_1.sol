@@ -1,20 +1,39 @@
-pragma solidity ^0.4.18;
+pragma solidity ^0.4.0;
 
-contract MyContract1 {
-    address creator;
-
-    function MyContract1 () {
-        creator = msg.sender;
-    }
-
-    // TODO Add functions
-
-    /**********
-     Standard kill() function to recover funds 
-     **********/
-    function kill() {
-        if (msg.sender == creator) {
-            suicide(creator); // kills this contract and sends remaining funds back to creator
-        }
-    }
+contract myFirstContract {
+    // This is comment
+   
+   // String Declaration
+   //  private
+   /*
+    * private
+    * public 
+    * internal 
+    * 3 Kinds of Access specifiers
+    * 
+    * uint [only positive value, allowed]
+    */
+   string private name;
+   uint private age; 
+   
+   /*
+    * Function name : setName
+    * Return type : Nothing
+    */
+  function setName(string newName){
+      name = newName;
+  }
+  
+  function getName() returns (string){
+  	return name;
+  }
+  
+    function setAge(string newAge){
+      name = newAge;
+  }
+  
+  function getAge() returns (uint){
+  	return age;
+  }
+   
 }
