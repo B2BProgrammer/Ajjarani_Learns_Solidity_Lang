@@ -1,4 +1,4 @@
-pragma solidity ^0.4.21;
+pragma solidity ^0.4.0;
 
 contract Coin {
     // The keyword "public" makes those variables
@@ -34,9 +34,7 @@ contract Coin {
     // This is the constructor whose code is
     // run only - once when the contract is created, not after trhe contract is created
     function Coin() public {
-        minter = msg.sender;
-        
-        msg.
+        minter = msg.sender;        
     }
 
     function mint(address receiver, uint amount) public {
@@ -50,6 +48,6 @@ contract Coin {
         if (balances[msg.sender] < amount) return;
         balances[msg.sender] -= amount;
         balances[receiver] += amount;
-        emit Sent(msg.sender, receiver, amount);
+        //emit Sent(msg.sender, receiver, amount);
     }
 }
