@@ -15,6 +15,8 @@ pragma solidity ^0.4.18;  // pragmas are instructions for the compiler about how
  * 
  * 
  * 
+ * 
+ * 
  */
  
 contract ContractComp1 {
